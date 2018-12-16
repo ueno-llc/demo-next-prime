@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "scripts": {
     "dev": "node server.js",
+    "heroku-postinstall": "npm run build",
     "build": "next build",
     "start": "NODE_ENV=production node server.js"
   },
