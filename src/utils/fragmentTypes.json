@@ -1,0 +1,42 @@
+{
+  "__schema": {
+    "types": [
+      {
+        "kind": "UNION",
+        "name": "CustomPageBodySlice",
+        "possibleTypes": [
+          {
+            "name": "CustomPageBodyImage"
+          },
+          {
+            "name": "CustomPageBodyProfiles"
+          },
+          {
+            "name": "CustomPageBodyText"
+          },
+          {
+            "name": "CustomPageBodyVideo"
+          },
+          {
+            "name": "UnknownSlice"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "ArticleBodySlice",
+        "possibleTypes": [
+          {
+            "name": "ArticleBodyText"
+          },
+          {
+            "name": "ArticleBodyImage"
+          },
+          {
+            "name": "UnknownSlice"
+          }
+        ]
+      }
+    ]
+  }
+}

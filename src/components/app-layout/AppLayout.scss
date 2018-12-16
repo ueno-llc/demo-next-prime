@@ -1,0 +1,12 @@
+@import '../../styles/config.scss';
+
+:global {
+  @import '../../styles/base.scss';
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+

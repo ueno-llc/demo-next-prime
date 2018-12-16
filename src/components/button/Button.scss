@@ -1,0 +1,77 @@
+@import 'src/styles/config';
+
+.button {
+  --btn-height: 40px;
+  --btn-border-width: 1px;
+
+  @include reset-button;
+
+  display: inline-flex;
+  position: relative;
+
+  padding: 0 $gutter * 0.5;
+
+  height: var(--btn-height);
+
+  font-size: $font-size;
+  line-height: calc(var(--btn-height) - (var(--btn-border-width) * 2) + 1px);
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+
+  cursor: pointer;
+
+  border: var(--btn-border-width) solid transparent;
+  background: $color-primary;
+  border-radius: 999px;
+
+  transition: 180ms;
+  transition-property: border-color, background-color, color, opacity;
+
+  @media (min-width: $min-360) {
+    padding: 0 $gutter;
+  }
+
+  & + & {
+    margin-left: $gutter / 2;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: darken($color-primary, 10%);
+  }
+
+  &.disabled {
+    cursor: default;
+
+    background-color: #bbb;
+  }
+
+  &.large {
+    --btn-height: 58px;
+
+    @media (min-width: $min-720) {
+      --btn-height: 66px;
+
+      padding: 0 $gutter * 1.5;
+    }
+  }
+
+  &.stroke {
+    color: $color-primary;
+
+    border: var(--btn-border-width) solid rgba($color-primary, 0.3);
+    background: transparent;
+
+    &:hover {
+      color: #fff;
+
+      background: $color-primary;
+    }
+  }
+}
