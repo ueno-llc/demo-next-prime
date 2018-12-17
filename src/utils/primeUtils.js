@@ -2,8 +2,8 @@ import { ApolloLink } from 'apollo-link';
 
 let versionId;
 
-export const primeUrl = 'http://localhost:4000';
-// export const primeUrl = 'https://prime-backend.herokuapp.com/graphql';
+// export const primeUrl = 'http://localhost:4000';
+export const primeUrl = 'https://prime-backend.herokuapp.com/graphql';
 
 export const setVersionId = (id = null) => {
   versionId = id;
