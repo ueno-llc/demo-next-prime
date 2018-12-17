@@ -6,7 +6,7 @@ let versionId;
 export const primeUrl = 'https://prime-backend.herokuapp.com';
 
 export const setVersionId = (id = null) => {
-  versionId = id;
+  versionId = String(id).length === 36 ? id : null;
 }
 
 export const PrimeLink = new ApolloLink((operation, forward) => {

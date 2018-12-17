@@ -12,10 +12,7 @@ export default (App) => {
 
       const cookie = String(req && req.headers.cookie || '');
       const cookies = new Map(cookie.split(';').map(n => n.trim().split('=')));
-
-      if (cookies.has('prime.versionId')) {
-        setVersionId(cookies.get('prime.versionId'));
-      }
+      setVersionId(cookies.get('prime.versionId'));
 
       let appProps = {};
       if (App.getInitialProps) {
