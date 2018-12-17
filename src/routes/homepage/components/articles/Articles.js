@@ -37,13 +37,12 @@ export class Articles extends Component {
                     return null;
                   }
 
-                  const url = `/articles/${article.slug}`;
                   const date = article.publicationDate;
                   const author = article.author;
 
                   return (
                     <li key={article.id} className={s.articles__item}>
-                      <Link href={url}>
+                      <Link as={`/articles/${article.slug}`} href={`/article?id=${article.slug}`}>
                         <a className={s.articles__link}>
                           {date && (
                             <p className={s.articles__date}>{format(date, 'DD MMMM')}</p>

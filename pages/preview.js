@@ -7,7 +7,7 @@ export default class Preview extends React.Component {
       const { versionId } = req.query;
       setVersionId(versionId);
       res.writeHead(302, {
-        'Set-Cookie': versionId ? 'prime.versionId=' + versionId : '',
+        'Set-Cookie': 'prime.versionId=' + String(versionId || ''),
         Location: '/',
       });
       res.end();

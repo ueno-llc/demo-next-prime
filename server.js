@@ -10,7 +10,7 @@ app.prepare()
   .then(() => {
     const server = express();
 
-    server.get('/articles/:articleId', (req, res) => {
+    server.get('/articles/:id', (req, res) => {
       return app.render(req, res, '/article', req.params);
     });
 
