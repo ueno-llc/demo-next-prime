@@ -5,6 +5,7 @@ import withApolloClient from '../src/utils/with-apollo-client';
 import { AppLayout } from '../src/components/app-layout/AppLayout';
 import { Header } from '../src/components/header/Header';
 import { Footer } from '../src/components/footer/Footer';
+import { PrimePreview } from '../src/components/prime-preview/PrimePreview';
 
 class MyApp extends App {
   render () {
@@ -16,6 +17,7 @@ class MyApp extends App {
             <Header />
             <Component {...pageProps} />
             <Footer />
+            <PrimePreview />
           </AppLayout>
         </ApolloProvider>
       </Container>

@@ -12,9 +12,10 @@ export const Homepage = () => (
   <Query
     query={homepageQuery}
   >
-    {({ loading, error, data: { Homepage } }) => {
+    {({ loading, error, data }) => {
       if (loading) return null;
       if (error) return <h3>Error: {error.message}</h3>
+      const { Homepage } = data;
       return (
         <div>
           <Hero carousel={Homepage.carousel} />
