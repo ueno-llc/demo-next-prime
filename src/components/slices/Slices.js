@@ -4,14 +4,14 @@ import { Image } from './Image';
 
 const renderSlice = (item, index) => {
   switch (item.__typename) {
-    case 'ArticleBodyText':
+    case 'TextSlice':
       return (
         <Text
           key={index}
           text={item.text}
         />
       );
-    case 'ArticleBodyImage':
+    case 'ImageSlice':
       return (
         <Image
           key={index}
