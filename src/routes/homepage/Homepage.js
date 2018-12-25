@@ -72,16 +72,20 @@ export const homepageQuery = gql`
       articlesSubheading
       featuredArticles {
         article {
-          id
-          slug
-          title
-          shortDescription
-          publicationDate
-          author {
+          ... on Article {
             id
-            name
-            bio
-            image
+            slug
+            title
+            shortDescription
+            publicationDate
+            author {
+              ... on Author {
+                id
+                name
+                bio
+                image
+              }
+            }
           }
         }
       }

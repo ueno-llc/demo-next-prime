@@ -56,18 +56,20 @@ export const articleQuery = gql`
           shortDescription
           publicationDate
           author {
-            id
-            name
-            bio
-            image
+            ... on Author {
+              id
+              name
+              bio
+              image
+            }
           }
           image
           body {
             __typename
-            ... on ArticleBodyText {
+            ... on TextSlice {
               text
             }
-            ... on ArticleBodyImage {
+            ... on ImageSlice {
               image
               caption
             }

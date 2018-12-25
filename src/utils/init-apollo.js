@@ -4,9 +4,9 @@ import fetch from 'isomorphic-unfetch'
 import introspectionQueryResultData from './fragmentTypes.json';
 import { PrimeLink, primeUrl } from './primeUtils';
 
-const fragmentMatcher = new IntrospectionFragmentMatcher({
-  introspectionQueryResultData
-});
+// const fragmentMatcher = new IntrospectionFragmentMatcher({
+//   introspectionQueryResultData
+// });
 
 let apolloClient = null;
 
@@ -24,7 +24,7 @@ function create(initialState) {
     connectToDevTools: process.browser,
     ssrMode: !process.browser,
     link: concat(PrimeLink, httpLink),
-    cache: new InMemoryCache({ fragmentMatcher }).restore(initialState || {}),
+    cache: new InMemoryCache().restore(initialState || {}),
   });
 }
 
